@@ -1,7 +1,7 @@
 Laboratório - Padrões Criacionais, Estruturais e Comportamentais
 
-Alunos: Jean Padilha
-        Lucas Rumph Nascimento
+Aluno: Jean Padilha
+Aluno: Lucas Rumph Nascimento
 
 Projeto desenvolvido para praticar padrões de projeto utilizando JavaScript.
 
