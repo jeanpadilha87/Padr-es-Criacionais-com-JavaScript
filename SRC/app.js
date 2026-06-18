@@ -1,5 +1,11 @@
 // =========================
-// Singleton
+// Padrões criacionais, estruturais e comportamentais.
+// JavaScript e Node.js
+// =========================
+
+
+// =========================
+// Singleton-DatabaseConnection-instância
 // =========================
 
 const DatabaseConnection = require('./singleton/DatabaseConnection');
@@ -12,7 +18,7 @@ const conexao2 = DatabaseConnection.getInstance();
 console.log(conexao1 === conexao2);
 
 // =========================
-// Factory Method
+// Factory Method-centralizar-formas de pagamento
 // =========================
 
 const PagamentoFactory = require('./factory/PagamentoFactory');
@@ -29,7 +35,7 @@ const pagamentoCartao = PagamentoFactory.criarPagamento('cartao');
 pagamentoCartao.processar(500);
 
 // =========================
-// Builder
+// Builder-Construtor de Objetos
 // =========================
 
 const PedidoBuilder = require('./builder/PedidoBuilder');
@@ -46,7 +52,7 @@ const pedido = new PedidoBuilder()
 console.log(pedido);
 
 // =========================
-// Adapter
+// Adapter adapta e traduz o pagamento
 // =========================
 
 const GatewayAdapter = require('./adapter/GatewayAdapter');
@@ -58,7 +64,7 @@ const gateway = new GatewayAdapter();
 gateway.processar(250);
 
 // =========================
-// Decorator
+// Decorator-funcionalidades extras-
 // =========================
 
 const Pix = require('./factory/Pix');
@@ -78,7 +84,7 @@ const pagamentoDecorado = new LogDecorator(
 pagamentoDecorado.processar(200);
 
 // =========================
-// Facade
+// Facade-Simplifcar finalização do pedido
 // =========================
 
 const CheckoutFacade = require('./facade/CheckoutFacade');
@@ -90,7 +96,7 @@ const checkout = new CheckoutFacade();
 checkout.finalizar(pedido);
 
 // =========================
-// Strategy
+// Strategy - estratégias de cálculo de frete
 // =========================
 
 const Carrinho = require('./strategy/Carrinho');
@@ -120,7 +126,7 @@ console.log(
 );
 
 // =========================
-// Observer
+// Observer - notificações de status do pedido
 // =========================
 
 const EmailObserver = require('./observer/EmailObserver');
@@ -136,7 +142,7 @@ pedido.adicionarObserver(new LogObserver());
 pedido.confirmar();
 
 // =========================
-// Command
+// Command - ações como objetos, desfazer e refazer
 // =========================
 
 const CancelarPedidoComando = require('./command/CancelarPedidoComando');
